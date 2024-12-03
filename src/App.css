@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.active {
+  color: #eee;
+}
+.myPic {
+  width: 100%;
+  filter: grayscale(1) opacity(0.5);
+}
+.about-me-para {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  text-align: justify;
+  font-size: 10px;
+  width: 20%;
+}
