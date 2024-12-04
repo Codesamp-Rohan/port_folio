@@ -33,7 +33,7 @@ const Navbar = () => {
         <p>Quick links</p>
         <span className="flex gap-[4px]">
           <li className="active">
-            <Link to="/">Home</Link>
+            <Link to="/">Home, </Link>
           </li>
           <li>
             <Link to="/about">About</Link>
