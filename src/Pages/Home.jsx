@@ -1,7 +1,13 @@
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Flickering from "../Components/Flickering";
 import ProjectBlock from "../Components/ProjectBlock";
+import cornerImg from "../assets/images/corner.png";
+import WorkTogether from "../Components/WorkTogether";
 
 const Home = () => {
+
   return (
     <div className="w-full">
       <div className="w-full h-[100vh] flex items-start">
@@ -100,6 +106,86 @@ const Home = () => {
       buttonLink={data.buttonLink}/>
         )
       })}
+       <div className="">
+        <div className="px-[1rem] mb-[4rem]">
+        <div className="z-[100] leading-tight text-[3rem] my-[4rem] p-[1rem]">
+          <h1>
+            <span className="main-font">S</span>ee my{" "}
+            <span className="main-font"><Flickering   initial={"P"}
+              chars={["P", "#", "^"]}
+              mainPause={"1200"}
+              subPause={"200"}/></span>rojects <span className="main-font">T</span>hat<br />
+          </h1>
+          <h1>
+            impress both{" "}
+          <Flickering
+              initial={"C"}
+              chars={["C", "#", "^"]}
+              mainPause={"1200"}
+              subPause={"200"}
+            />
+            lient
+            {" "}
+            <span className="main-font">
+              &
+            </span><br /><span className="main-font">C</span>ustomers.
+          </h1>
+          </div>
+          <div className="flex justify-end">
+            <span className="w-[50%]">
+            <p className="text-[15px] text-[#777] text-justify px-2rem">My projects showcases the exceptional work that I have delivered. Have a look into my portfolio, highlighting the diverse range of web design and Webflow development projects for various industries. </p>
+            </span>
+          </div>
+          <div className="flex-1 flex justify-between h-[90vh] my-[6rem] gap-4">
+            <div className="w-full relative h-full">
+            <div className="bg-[#141414] p-[1rem] flex flex-col gap-2">
+                <p className="text-[#777] text-[12px]">Website Development</p>
+                <img className="h-[20vh] object-cover" src="https://www.danielvaszka.com/Images/Bang-Mobile-Long.jpg" alt="project-img" />
+                <h1 className="text-[18px] text-[#ddd]">Project Name</h1>
+                <p className="text-[11px] text-[#666] text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur delectus, eveniet ad eligendi accusantium nobis quis facilis modi. Distinctio unde neque dolorum incidunt cupiditate laudantium nihil odio facilis mollitia corrupti?</p>
+              </div>
+              <div className="flex items-center justify-center h-1/2 relative mt-10">
+                   <img src={cornerImg} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 left-0" />
+                   <img src={cornerImg} className="w-[14px] h-[14px] absolute animation-[300ms] bottom-0 left-0 rotate-[-90deg]" />
+                   <img src={cornerImg} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 right-0 rotate-90" />
+                   <img src={cornerImg} className="w-[14px] h-[14px] absolute animation-[300ms] bottom-0 right-0 rotate-180" />
+                <button type="button" className="text-[2rem] flex items-center justify-center"><span className="main-font">V</span>iew All</button>
+              </div>
+            </div>
+            <div className="w-full relative h-full pb-[4rem] flex flex-col justify-end">
+              <div data-scroll data-scroll-speed="0.2" className="bg-[#141414] p-[1rem] flex flex-col gap-2 absolute">
+                <p className="text-[#777] text-[12px]">Website Development</p>
+                <img className="h-[20vh] object-cover" src="https://www.danielvaszka.com/Images/Bang-Mobile-Long.jpg" alt="project-img" />
+                <h1 className="text-[18px] text-[#ddd]">Project Name</h1>
+                <p className="text-[11px] text-[#666] text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur delectus, eveniet ad eligendi accusantium nobis quis facilis modi. Distinctio unde neque dolorum incidunt cupiditate laudantium nihil odio facilis mollitia corrupti?</p>
+              </div>
+            </div>
+            <div className="w-full relative h-full pt-[4rem]">
+            <div data-scroll data-scroll-speed="-0.2" className="bg-[#141414] p-[1rem] flex flex-col gap-2 absolute">
+                <p className="text-[#777] text-[12px]">Website Development</p>
+                <img className="h-[20vh] object-cover" src="https://www.danielvaszka.com/Images/Bang-Mobile-Long.jpg" alt="project-img" />
+                <h1 className="text-[18px] text-[#ddd]">Project Name</h1>
+                <p className="text-[11px] text-[#666] text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur delectus, eveniet ad eligendi accusantium nobis quis facilis modi. Distinctio unde neque dolorum incidunt cupiditate laudantium nihil odio facilis mollitia corrupti?</p>
+              </div>
+            </div>
+            <div className="w-full relative h-full flex flex-col gap-10">
+            <div className="bg-[#141414] p-[1rem] flex flex-col gap-2">
+                <p className="text-[#777] text-[12px]">Website Development</p>
+                <img className="h-[20vh] object-cover" src="https://www.danielvaszka.com/Images/Bang-Mobile-Long.jpg" alt="project-img" />
+                <h1 className="text-[18px] text-[#ddd]">Project Name</h1>
+                <p className="text-[11px] text-[#666] text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur delectus, eveniet ad eligendi accusantium nobis quis facilis modi. Distinctio unde neque dolorum incidunt cupiditate laudantium nihil odio facilis mollitia corrupti?</p>
+              </div>
+              <div className="bg-[#141414] p-[1rem] flex flex-col gap-2">
+                <p className="text-[#777] text-[12px]">Website Development</p>
+                <img className="h-[20vh] object-cover" src="https://www.danielvaszka.com/Images/Bang-Mobile-Long.jpg" alt="project-img" />
+                <h1 className="text-[18px] text-[#ddd]">Project Name</h1>
+                <p className="text-[11px] text-[#666] text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur delectus, eveniet ad eligendi accusantium nobis quis facilis modi. Distinctio unde neque dolorum incidunt cupiditate laudantium nihil odio facilis mollitia corrupti?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <WorkTogether />
     </div>
   );
 };

@@ -3,8 +3,12 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Navbar from "./Components/Navbar";
 import "./App.css";
+import LocomotiveScroll from "locomotive-scroll";
 
 const App = () => {
+
+  const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <Router>
       <Navbar />

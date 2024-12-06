@@ -19,7 +19,7 @@ const ProjectBlock = ({blockNumber, title, flickeringChars, description, buttonT
 
     return(
         <>
-        <div className="h-[50vh] m-[1rem] p-[2rem] flex justify-between relative">
+        <div className="h-[50vh] m-[1rem] p-[2rem] flex justify-between relative brightness-[20%] animation-[500ms] hover:brightness-100">
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 left-0 opacity-50" />
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] bottom-0 left-0 rotate-[-90deg]" />
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 right-0 rotate-90" />
@@ -37,7 +37,9 @@ const ProjectBlock = ({blockNumber, title, flickeringChars, description, buttonT
                 <button type="button" className="flex gap-1 items-center text-[14px]" to={buttonLink}><img src={arrowImg} className="w-[10px]" />{buttonText}</button>
                 </span>
             </div>
-            <img src={imageSrc} alt="img" className="w-[35vw] overflow-hidden object-cover" />
+            <div className="w-[35vw] overflow-hidden flex items-center justify-center">
+                <img data-scroll data-scroll-speed="0.1" src={imageSrc} alt="img" className="w-[35vw] overflow-hidden object-cover" />
+                </div>
         </div>
             <div className="w-full h-[0.5px] bg-[#333]"></div>
             </>
