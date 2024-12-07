@@ -2,11 +2,53 @@ import Flickering from "./Flickering"
 import logo from "../assets/images/myClone.png";
 import cornerImg from "../assets/images/corner.png";
 import { useEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 const WorkTogether = () => {
 
     const [opacity, setOpacity] = useState(1);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".scrollLeft", {
+        scrollTrigger: {
+          trigger: ".scroll-container", // Element that triggers the animation
+          start: "top center",          // When the animation starts
+          end: "center center",         // When the animation ends
+          scrub: true,                  // Smooth scrubbing as the user scrolls
+        },
+        left: "30%",
+        opacity: 1,
+        top: "50%",
+        ease: "power1.inOut", // Ease for smoothness
+      });
+      gsap.to(".scrollUp", {
+        scrollTrigger: {
+          trigger: ".scroll-container", // Element that triggers the animation
+          start: "top center",          // When the animation starts
+          end: "center center",         // When the animation ends
+          scrub: true,                  // Smooth scrubbing as the user scrolls
+        },
+        left: "50%",
+        opacity: 1,
+        top: "50%",
+        ease: "power1.inOut", // Ease for smoothness
+      });
+      gsap.to(".scrollRight", {
+        scrollTrigger: {
+          trigger: ".scroll-container", // Element that triggers the animation
+          start: "top center",          // When the animation starts
+          end: "center center",         // When the animation ends
+          scrub: true,                  // Smooth scrubbing as the user scrolls
+        },
+        left: "70%",
+        opacity: 1,
+        top: "50%",
+        ease: "power1.inOut", // Ease for smoothness
+      });
+
 
     useEffect(() => {
         const flickerEffect = () => {
@@ -19,20 +61,20 @@ const WorkTogether = () => {
     }, [])
 
     return (
-        <div className="h-[80vh] m-[1rem] relative">
+        <div className="h-[96vh] m-[1rem] relative scroll-container">
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 left-0 opacity-50" />
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] bottom-0 left-0 rotate-[-90deg]" />
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 right-0 rotate-90" />
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] bottom-0 right-0 rotate-180" />
-            <div className="text-[4rem] flex justify-center items-center">
-            <h1>Let's {" "}
+            <div className="text-[4rem] flex justify-center items-center h-[90%]">
+            <h1 className="scrollLeft absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0">Let's {" "}
                 <Flickering initial={"W"}
               chars={["W", "@", "%"]}
               mainPause={"1600"}
               subPause={"400"}/>
                 ork</h1>
-                <img src={logo} className="w-[20%]" />
-            <h1>
+                <img src={logo} className="scrollUp w-[20%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0" />
+            <h1 className="scrollRight absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0">
             <Flickering initial={"T"}
               chars={["T", "@", "%"]}
               mainPause={"1600"}
@@ -40,9 +82,9 @@ const WorkTogether = () => {
             ogether
             </h1>
             </div>
-            <div>
-                <button type="button"></button>
-                <button type="button"></button>
+            <div className="flex justify-between mx-[6rem]">
+                <button type="button">Book a free discovery call</button>
+                <button type="button">Get in touch</button>
             </div>
         </div>
     )

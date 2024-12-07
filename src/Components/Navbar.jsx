@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setLoading }) => {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -9,11 +9,10 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 200) {
-        setIsHidden(true);
+        setIsHidden(true); // Hide navbar on scroll down
       } else {
-        setIsHidden(false);
+        setIsHidden(false); // Show navbar on scroll up
       }
-
       setLastScrollY(currentScrollY);
     };
 
@@ -24,19 +23,43 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    if (currentPath === path) return; // Avoid unnecessary re-navigations
+    setLoading(true); // Start loading
+    setTimeout(() => {
+      navigate(path); // Navigate to the target path
+      setLoading(false); // Stop loading after navigation
+    }, 1000); // Simulate loading delay
+  };
+
   return (
     <nav
       className={`p-[1.4rem] fixed top-0 w-full flex justify-between text-[#acacac] bg-transparent text-[0.6em] duration-300 z-10 ${
         isHidden ? "translate-y-[-150%]" : "translate-y-0"
-      }`}>
+      }`}
+    >
       <ul className="flex flex-col">
         <p>Quick links</p>
         <span className="flex gap-[4px]">
-          <li className="active">
-            <Link to="/">Home, </Link>
+          <li className={currentPath === "/" ? "active" : ""}>
+            <button onClick={() => handleNavigation("/")}>Home,</button>
           </li>
-          <li>
-            <Link to="/about">About</Link>
+          <li className={currentPath === "/about" ? "active" : ""}>
+            <button onClick={() => handleNavigation("/about")}>About,</button>
+          </li>
+          <li className={currentPath === "/services" ? "active" : ""}>
+            <button onClick={() => handleNavigation("/services")}>
+              Services,
+            </button>
+          </li>
+          <li className={currentPath === "/projects" ? "active" : ""}>
+            <button onClick={() => handleNavigation("/projects")}>
+              Projects
+            </button>
           </li>
         </span>
       </ul>

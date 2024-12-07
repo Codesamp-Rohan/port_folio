@@ -19,7 +19,7 @@ const ProjectBlock = ({blockNumber, title, flickeringChars, description, buttonT
 
     return(
         <>
-        <div className="h-[50vh] m-[1rem] p-[2rem] flex justify-between relative brightness-[20%] animation-[500ms] hover:brightness-100">
+        <div className="h-[50vh] m-[1rem] p-[2rem] flex justify-between relative">
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 left-0 opacity-50" />
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] bottom-0 left-0 rotate-[-90deg]" />
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 right-0 rotate-90" />
