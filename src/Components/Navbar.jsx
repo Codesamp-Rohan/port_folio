@@ -46,18 +46,18 @@ const Navbar = ({ setLoading }) => {
         <p>Quick links</p>
         <span className="flex gap-[4px]">
           <li className={currentPath === "/" ? "active" : ""}>
-            <button onClick={() => handleNavigation("/")}>Home,</button>
+            <button className="button" onClick={() => handleNavigation("/")}>Home,</button>
           </li>
           <li className={currentPath === "/about" ? "active" : ""}>
-            <button onClick={() => handleNavigation("/about")}>About,</button>
+            <button className="button" onClick={() => handleNavigation("/about")}>About,</button>
           </li>
           <li className={currentPath === "/services" ? "active" : ""}>
-            <button onClick={() => handleNavigation("/services")}>
+            <button className="button" onClick={() => handleNavigation("/services")}>
               Services,
             </button>
           </li>
           <li className={currentPath === "/projects" ? "active" : ""}>
-            <button onClick={() => handleNavigation("/projects")}>
+            <button className="button" onClick={() => handleNavigation("/projects")}>
               Projects
             </button>
           </li>

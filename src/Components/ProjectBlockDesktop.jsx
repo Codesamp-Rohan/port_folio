@@ -3,7 +3,7 @@ import arrowImg from "../assets/images/arrow.png";
 import cornerImg from "../assets/images/corner.png";
 import { useEffect, useState } from "react";
 
-const ProjectBlock = ({blockNumber, title, flickeringChars, description, buttonText, imageSrc, buttonLink}) => {
+const ProjectBlockDesktop = ({blockNumber, title, flickeringChars, description, buttonText, imageSrc, buttonLink}) => {
 
     const [opacity, setOpacity] = useState(1);
 
@@ -28,13 +28,13 @@ const ProjectBlock = ({blockNumber, title, flickeringChars, description, buttonT
                 <p className="text-[#777] text-[14px]">[<span className="main-font">{blockNumber}</span>]</p>
             </div>
             <div className="w-[30vw] flex flex-col justify-around">
-                <h1 className="text-[2.8rem]"><Flickering initial={"D"}
+                <h1 className="text-[1.6rem] lg:text-[2.8rem]"><Flickering initial={"D"}
               chars={flickeringChars}
               mainPause={"1600"}
               subPause={"400"}/>{title}</h1>
                 <span className="flex flex-col items-start gap-[1rem]">
                 <p className="text-[12px] text-[#777] w-[80%]">{description}</p>
-                <button type="button" className="flex gap-1 items-center text-[14px]" to={buttonLink}><img src={arrowImg} className="w-[10px]" />{buttonText}</button>
+                <button type="button" className="flex gap-1 items-center text-[14px] button" to={buttonLink}><img src={arrowImg} className="w-[10px]" />{buttonText}</button>
                 </span>
             </div>
             <div className="w-[35vw] overflow-hidden flex items-center justify-center">
@@ -46,4 +46,4 @@ const ProjectBlock = ({blockNumber, title, flickeringChars, description, buttonT
     )
 }
 
-export default ProjectBlock;
+export default ProjectBlockDesktop;

@@ -18,7 +18,7 @@ const Footer = ({setLoading}) => {
 
     return(
         <>
-        <div className="flex flex-row justify-between items-start mx-6 py-6 my-10 border-y-[0.1px] border-y-[#333]">
+        <div className="flex flex-row justify-between items-start mx-6 py-14 my-10 border-y-[0.1px] border-y-[#333]">
             <div className="flex flex-col">
                 <p className="text-[14px] mb-[16px] text-[#777]">Site Links</p>
                 <ul className="text-[12px] text-[#777]">
@@ -66,7 +66,7 @@ const Footer = ({setLoading}) => {
             </div>
         </div>
         <div className="flex justify-between text-[12px] mx-6 mb-6">
-            <h1>@2024 Rohan Chaudhary. No rights reserved."SAD"</h1>
+            <h1>@2024 Rohan Chaudhary. No rights reserved.😀</h1>
             <p className="text-[#777]">Neither Privacy nor Terms & Conditions</p>
         </div>
         </>
