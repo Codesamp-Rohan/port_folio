@@ -4,7 +4,7 @@ import mobile from "../assets/images/MobileDevelopment.png";
 import p2p from "../assets/images/P2P.png";
 import Flickering from "../Components/Flickering";
 import ProjectBlockDesktop from "../Components/ProjectBlockDesktop";
-import myPic from "../assets/images/myPic.jpeg";
+import myPic from "../assets/images/mountain.jpeg";
 import arrowImg from "../assets/images/arrow.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import HomeProjectDesktop from "../Components/HomeProjectDesktop";
@@ -38,11 +38,32 @@ const Home = ({setLoading}) => {
       return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // Scroll scale of myPic image
+    const [scrollScale, setScrollScale] = useState(1);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        const scaleValue = 1 + scrollTop * 0.0005; // Adjust scaling factor as needed
+        setScrollScale(scaleValue > 1.5 ? 1.5 : scaleValue); // Limit maximum scale to 1.5
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+
   return (
     <div className="w-full">
       {/* Home Section */}
       <div className="w-full h-[100vh] flex items-start">
-        <img data-scroll data-scroll-speed="0.5" className="myPic" src={myPic} alt="my-image" />
+        <div className="myPic">
+        <img className="w-[100%] h-[100%] object-cover" src={myPic} alt="my-image"  style={{
+            transform: `scale(${scrollScale})`,
+            transition: "transform 0.1s ease-out",
+          }} />
+          </div>
         <p className="about-me-para">
           <b className="text-[14px] text-[#bbb]">About Me</b>
           <br />I am a passionate software developer with expertise in frontend
@@ -88,9 +109,9 @@ const Home = ({setLoading}) => {
         </div>
       </div>
       {/* About and Project Section */}
-      <div className="">
-        <div className="pr-[4rem] mb-[4rem]">
-        <div className="z-[100] leading-tight text-[3rem] my-[4rem] p-[1rem]">
+      <div>
+        <div className="px-[1rem] mb-[4rem]">
+        <div className="z-[100] leading-tight text-[2rem] md:text-[3rem] my-[4rem] md:py-[1rem]">
           <h1>
             <span className="main-font">W</span>ebsite{" "}
             <span className="main-font"><Flickering   initial={"D"}
@@ -115,9 +136,9 @@ const Home = ({setLoading}) => {
           </h1>
           </div>
           <div className="flex justify-end">
-            <span className="w-[50%]">
+            <span className="w-[100%] md:w-[50%]">
             <p className="text-[15px] text-[#777] text-justify px-2rem">I am a passionate software developer with expertise in frontend development and peer-to-peer (P2P) technologies. My focus lies in creating intuitive and engaging user experiences, coupled with robust decentralized architectures. I am committed to continuous learning and growth in the tech domain. My technical interests include building user-friendly interfaces, decentralized systems, and collaborative tools that empower individuals and organizations alike.</p>
-            <span className="p-[2rem] flex justify-start gap-[4rem]">
+            <span className="text-[10px] md:text-[14px] py-[1rem] md:p-[2rem] flex justify-start gap-[4rem]">
               <button type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Services</button>
               <button type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Book a free discovery call</button>
             </span>
@@ -125,6 +146,7 @@ const Home = ({setLoading}) => {
           </div>
         </div>
       </div>
+      {/* Project Section */}
       {projectData.map((data, index) => {
         return(
           isMobile ? <ProjectBlockMobile key={index}
@@ -146,7 +168,7 @@ const Home = ({setLoading}) => {
       })}
        <div className="">
         <div className="px-[1rem] mb-[4rem]">
-        <div className="z-[100] leading-tight text-[3rem] my-[4rem] p-[1rem]">
+        <div className="z-[100] leading-tight text-[2rem] md:text-[3rem] my-[4rem] md:p-[1rem]">
           <h1>
             <span className="main-font">S</span>ee my{" "}
             <span className="main-font"><Flickering   initial={"P"}
@@ -170,7 +192,7 @@ const Home = ({setLoading}) => {
           </h1>
           </div>
           <div className="flex justify-end">
-            <span className="w-[50%]">
+            <span className="w-[100%] md:w-[50%]">
             <p className="text-[15px] text-[#777] text-justify px-2rem">My projects showcases the exceptional work that I have delivered. Have a look into my portfolio, highlighting the diverse range of web design and Webflow development projects for various industries. </p>
             </span>
           </div>
