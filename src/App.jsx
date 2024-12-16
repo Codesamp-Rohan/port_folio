@@ -16,7 +16,7 @@ const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
 
   return (
-    <Router>
+    <Router basename="/port_folio">
       <Loader loading={loading}/>
       <Navbar setLoading={setLoading}/>
 
