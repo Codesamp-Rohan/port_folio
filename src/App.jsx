@@ -23,7 +23,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home setLoading={setLoading} />} />
         <Route path="/about" element={<About setLoading={setLoading}/>} />
+        {/* <Route path="/services" element={<Services setLoading={setLoading}/>} /> */}
         <Route path="/projects" element={<Project setLoading={setLoading}/>} />
+        {/* <Route path="/contact" element={<Contact setLoading={setLoading}/>} /> */}
       </Routes>
       <WorkTogether />
       <Footer setLoading={setLoading}/>

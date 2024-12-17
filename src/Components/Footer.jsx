@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import cornerImg from "../assets/images/corner.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,6 +9,33 @@ const Footer = ({setLoading}) => {
     const location = useLocation();
     const currentPath = location.pathname;
     const navigate = useNavigate();
+
+    const [nextPath, setNextPath] = useState("/about");
+    const [nextText, setNextText] = useState("About Me");
+
+    useEffect(() => {
+      switch (currentPath) {
+        case "/":
+          setNextPath("/about");
+          setNextText("About Me");
+          break;
+        case "/about":
+          setNextPath("/services");
+          setNextText("Services");
+          break;
+        case "/services":
+          setNextPath("/projects");
+          setNextText("Projects");
+          break;
+        case "/projects":
+          setNextPath("/contact");
+          setNextText("Contact");
+          break;
+        default:
+          setNextPath("/");
+          setNextText("Home");
+      }
+    }, [currentPath])
 
     const handleNavigation = (path) => {
         console.log("Current Path:", currentPath);
@@ -81,9 +108,10 @@ const Footer = ({setLoading}) => {
             </button>
           </li>
           <li className={currentPath === "/projects" ? "active" : "button"}>
-            <button onClick={() => handleNavigation("/projects")}>
-              Projects
-            </button>
+            <button onClick={() => handleNavigation("/projects")}> Projects </button>
+          </li>
+          <li className={currentPath === "/contact" ? "active" : "button"}>
+            <button onClick={() => handleNavigation("/contact")}> Contact </button>
           </li>
                     <li className="text-[#fff]">Free discovery call</li>
                 </ul>
@@ -91,20 +119,19 @@ const Footer = ({setLoading}) => {
             <div className="flex flex-col">
                 <p className="text-[14px] mb-[16px] text-[#777]">Services Links</p>
                 <ul className="text-[12px] text-[#777]">
-                    <li className="button">Home</li>
-                    <li className="button">About me</li>
-                    <li className="button">Services</li>
-                    <li className="button">Projects</li>
+                    <li className="button">Website Development</li>
+                    <li className="button">P2P App Development</li>
+                    <li className="button">App Development</li>
+                    <li className="button">Designing</li>
                 </ul>
             </div>
             <div className="flex flex-col">
                 <p className="text-[14px] mb-[16px] text-[#777]">Other Links</p>
                 <ul className="text-[12px] text-[#fff]">
                     <li className="button">Linkedin</li>
-                    <li className="button">About me</li>
-                    <li className="button">Services</li>
+                    <li className="button">Twitter</li>
                     <li className="button">Instagram</li>
-                    <li className="button">Contact</li>
+                    <li className="button" mailto="rohanchaudhary.bkbiet2022@gmail.com">Mail</li>
                 </ul>
             </div>
             </div>
@@ -114,7 +141,7 @@ const Footer = ({setLoading}) => {
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] top-0 right-0 rotate-90" />
             <img src={cornerImg} style={{opacity}} className="w-[14px] h-[14px] absolute animation-[300ms] bottom-0 right-0 rotate-180" />
                 <p className="text-[14px] mb-[16px] text-[#777]">Site Links</p>
-                <button className="main-font text-[3rem]">About Me</button>
+                <button className="main-font text-[3rem]" onClick={() => handleNavigation(nextPath)}>{nextText}</button>
             </div>
         </div>
         <div className="flex justify-between text-[12px] mx-6 mb-6">
