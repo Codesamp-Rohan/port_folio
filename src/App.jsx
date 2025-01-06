@@ -9,6 +9,7 @@ import Loader from "./Components/Loader";
 import { useState } from "react";
 import Project from "./Pages/Project";
 import WorkTogether from "./Components/WorkTogether";
+import P2P from "./Pages/P2P";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/" element={<Home setLoading={setLoading} />} />
         <Route path="/about" element={<About setLoading={setLoading}/>} />
         {/* <Route path="/services" element={<Services setLoading={setLoading}/>} /> */}
+        <Route path="/peer2peer" element={<P2P setLoading={setLoading}/>} />
         <Route path="/projects" element={<Project setLoading={setLoading}/>} />
         {/* <Route path="/contact" element={<Contact setLoading={setLoading}/>} /> */}
       </Routes>

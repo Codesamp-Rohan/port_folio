@@ -28,12 +28,12 @@ const Navbar = ({ setLoading }) => {
   const navigate = useNavigate();
 
   const handleNavigation = (path) => {
-    if (currentPath === path) return; // Avoid unnecessary re-navigations
-    setLoading(true); // Start loading
+    if (currentPath === path) return;
+    setLoading(true);
     setTimeout(() => {
-      navigate(path); // Navigate to the target path
-      setLoading(false); // Stop loading after navigation
-    }, 1000); // Simulate loading delay
+      navigate(path);
+      setLoading(false);
+    }, 1000);
   };
 
   return (
@@ -51,9 +51,9 @@ const Navbar = ({ setLoading }) => {
           <li className={currentPath === "/about" ? "active" : ""}>
             <button className="button" onClick={() => handleNavigation("/about")}>About,</button>
           </li>
-          <li className={currentPath === "/services" ? "active" : ""}>
-            <button className="button" onClick={() => handleNavigation("/services")}>
-              Services,
+          <li className={currentPath === "/peer2peer" ? "active" : ""}>
+            <button className="button" onClick={() => handleNavigation("/peer2peer")}>
+              Peer2Peer,
             </button>
           </li>
           <li className={currentPath === "/projects" ? "active" : ""}>

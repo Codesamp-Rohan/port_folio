@@ -102,9 +102,9 @@ const Footer = ({setLoading}) => {
           <li className={currentPath === "/about" ? "active" : "button"}>
             <button onClick={() => handleNavigation("/about")}>About,</button>
           </li>
-          <li className={currentPath === "/services" ? "active" : "button"}>
-            <button onClick={() => handleNavigation("/services")}>
-              Services,
+          <li className={currentPath === "/peer2peer" ? "active" : "button"}>
+            <button onClick={() => handleNavigation("/peer2peer")}>
+              Peer2Peer
             </button>
           </li>
           <li className={currentPath === "/projects" ? "active" : "button"}>
