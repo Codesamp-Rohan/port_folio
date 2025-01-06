@@ -111,7 +111,8 @@ const Footer = ({setLoading}) => {
             <button onClick={() => handleNavigation("/projects")}> Projects </button>
           </li>
           <li className={currentPath === "/contact" ? "active" : "button"}>
-            <button onClick={() => handleNavigation("/contact")}> Contact </button>
+            {/* <button onClick={() => handleNavigation("/contact")}> Contact </button> */}
+            <a href={`mailto:rohanchaudhary.bkbiet2022@gmail.com`}> Contact </a>
           </li>
                     <li className="text-[#fff]">Free discovery call</li>
                 </ul>

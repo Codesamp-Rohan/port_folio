@@ -28,8 +28,9 @@ const Project = ({setLoading}) => {
                     My projects showcases the exceptional work that I have delivered. Have a look into my portfolio, highlighting the diverse range of projects for various industries. Most of my projects are under no disclosure agreements which means I can only share here a few. 
                     </p>
                     <div className="w-[100%] lg:w-[50%] mt-10 flex gap-[4rem]">
-                    <button type="button" onClick={() => handleNavigation("/services")} className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Services</button>
-                    <button type="button" onClick={() => handleNavigation("/contact")} className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Contact</button>
+                    <button type="button" onClick={() => handleNavigation("/about")} className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />About</button>
+                    <a href="mailto:rohanchaudhary.bkbiet2022@gmail.com" type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Contact</a>
+
                     </div>
                     </div>
             </div>

@@ -72,7 +72,7 @@ const Navbar = ({ setLoading }) => {
           <span className="w-[4px] h-[4px] bg-green-400 rounded-full"></span>
           Available for new projects
         </p>
-        <p className="active">Contact, Book a meeting</p>
+        <a href="mailto:rohanchaudhary.bkbiet2022@gmail.com" className="active">Contact, Book a meeting</a>
       </div>
     </nav>
   );

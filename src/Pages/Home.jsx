@@ -139,8 +139,8 @@ const Home = ({setLoading}) => {
             <span className="w-[100%] md:w-[50%]">
             <p className="text-[15px] text-[#777] text-justify px-2rem">I am a passionate software developer with expertise in frontend development and peer-to-peer (P2P) technologies. My focus lies in creating intuitive and engaging user experiences, coupled with robust decentralized architectures. I am committed to continuous learning and growth in the tech domain. My technical interests include building user-friendly interfaces, decentralized systems, and collaborative tools that empower individuals and organizations alike.</p>
             <span className="text-[10px] md:text-[14px] py-[1rem] md:p-[2rem] flex justify-start gap-[4rem]">
-              <button type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Services</button>
-              <button type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Book a free discovery call</button>
+              <button onClick={() => handleNavigation("/projects")} type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Projects</button>
+              <a href="mailto:rohanchaudhary.bkbiet2022@gmail.com" type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Contact</a>
             </span>
             </span>
           </div>
