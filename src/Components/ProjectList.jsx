@@ -30,7 +30,7 @@ const ProjectList = () => {
                             <p className="text-[#777] text-[12px]">Website Development</p>
                             <img className="h-[30vh] lg:h-[20vh] xl:h-[30vh] object-cover" src={blogMockupImg} alt="project-img" />
                             <h1 className="text-[18px] text-[#ddd]">Personal Blog Portfolio</h1>
-                            <p className="text-[11px] text-[#666] text-left">Holesail.io is a platform designed to simplify Peer-to-Peer (P2P) app development by leveraging cutting-edge technologies like Holepunch and Hyperswarm. It empowers developers to build decentralized applications with ease, enabling secure and efficient real-time communication without relying on central servers.</p>
+                            <p className="text-[11px] text-[#666] text-left">This blog-portfolio is a curated collection of my work, blending personal narratives with professional achievements. It's a digital space where I share my journey, expertise, and passions. Dive in to explore diverse projects, insightful blog posts, and creative showcases that reflect my unique perspective</p>
                         </div>
                     </Link>
                 </div>
@@ -53,7 +53,7 @@ const ProjectList = () => {
                             <p className="text-[#777] text-[12px]">Awwwards Clone</p>
                             <img className="h-[30vh] lg:h-[20vh] xl:h-[30vh] object-cover" src={deployMockupImg} alt="project-img" />
                             <h1 className="text-[18px] text-[#ddd]">Deploy Clone</h1>
-                            <p className="text-[11px] text-[#666] text-left">Holesail.io is a platform designed to simplify Peer-to-Peer (P2P) app development by leveraging cutting-edge technologies like Holepunch and Hyperswarm. It empowers developers to build decentralized applications with ease, enabling secure and efficient real-time communication without relying on central servers.</p>
+                            <p className="text-[11px] text-[#666] text-left">ReThink - Recycling: Creating a Sustainable Circular Economy for Plastics. Our ambitious and dedicated team is made up of people looking to change the world, and leave it a cleaner place for the next generations.</p>
                         </div>
                     </Link>
                     <Link to={`https://docyard.co.in`} target="_blank" className="relative w-[100%] flex justify-end">
@@ -72,7 +72,7 @@ const ProjectList = () => {
                             <p className="text-[#777] text-[12px]">Website Development, Design</p>
                             <img className="h-[30vh] md:h-[60vh] object-cover" src={gpuMockupImg} alt="project-img" />
                             <h1 className="text-[18px] text-[#ddd]">Hyperspace</h1>
-                            <p className="text-[11px] text-[#666] text-left">Holesail.io is a platform designed to simplify Peer-to-Peer (P2P) app development by leveraging cutting-edge technologies like Holepunch and Hyperswarm. It empowers developers to build decentralized applications with ease, enabling secure and efficient real-time communication without relying on central servers.</p>
+                            <p className="text-[11px] text-[#666] text-left">Hyperspace is the world's first truly peer-to-peer GPU rental service. Use one simple client app to pay, provision and rent GPU globally. Hyperspace uses Lightning Bitcoin for Payment. You can use a node from thousands of providers or run one of your own, this gives you full control over your transactions.</p>
                         </div>
                     </Link>
                 </div>
