@@ -33,8 +33,8 @@ const ProjectBlockDesktop = ({blockNumber, title, flickeringChars, description, 
               mainPause={"1600"}
               subPause={"400"}/>{title}</h1>
                 <span className="flex flex-col items-start gap-[1rem]">
-                <p className="text-[12px] text-[#777] w-[80%]">{description}</p>
-                <button type="button" className="flex gap-1 items-center text-[14px] button" to={buttonLink}><img src={arrowImg} className="w-[10px]" />{buttonText}</button>
+                <p className="text-[16px] text-[#777] w-[80%]">{description}</p>
+                <button type="button" className="flex gap-1 items-center text-[16px] button uppercase" to={buttonLink}><img src={arrowImg} className="w-[10px]" />{buttonText}</button>
                 </span>
             </div>
             <div className="w-[35vw] overflow-hidden flex items-center justify-center">

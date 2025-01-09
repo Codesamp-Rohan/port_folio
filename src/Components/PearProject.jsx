@@ -31,13 +31,13 @@ const PearProject = ({blockNumber, title, flickeringChars, description, buttonTe
               mainPause={"1600"}
               subPause={"400"}/>{title}</h1>
                 <span className="flex flex-col items-start gap-[1rem]">
-                <p className="text-[16px] text-[#777] w-[100%] text-justify">{description}</p>
+                <p className="text-[16px] 2xl:text-[20px] text-[#777] w-[100%] text-justify">{description}</p>
                 <Link target="_blank" type="button" className="flex gap-1 items-center text-[18px] button" to={buttonLink}><img src={arrowImg} className="w-[10px]" />{buttonText}</Link>
                 </span>
             </div>
             <div className="w-full md:w-[50vw] overflow-hidden flex items-center justify-center">
                 <img data-scroll data-scroll-speed="0.1" src={imageSrc} alt="img" className="w-[100%] md:w-[50vw] overflow-hidden object-cover" />
-                </div>
+            </div>
         </div>
             <div className="w-full h-[0.5px] bg-[#333]"></div>
             </>

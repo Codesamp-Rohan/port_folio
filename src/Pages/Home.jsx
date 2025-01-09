@@ -65,7 +65,7 @@ const Home = ({setLoading}) => {
           }} />
           </div>
         <p className="about-me-para">
-          <b className="text-[14px] text-[#bbb]">About Me</b>
+          <b className="text-[20px] text-[#bbb] leading-[2rem]">About Me</b>
           <br />I am a passionate software developer with expertise in frontend
           development and peer-to-peer (P2P) technologies. My focus lies in
           creating intuitive and engaging user experiences, coupled with robust
@@ -111,7 +111,7 @@ const Home = ({setLoading}) => {
       {/* About and Project Section */}
       <div>
         <div className="px-[1rem] mb-[4rem]">
-        <div className="z-[100] leading-tight text-[2rem] md:text-[3rem] my-[4rem] md:py-[1rem]">
+        <div className="z-[100] leading-tight text-[2rem] md:text-[4rem] my-[4rem] md:py-[1rem]">
           <h1>
             <span className="main-font">W</span>ebsite{" "}
             <span className="main-font"><Flickering   initial={"D"}
@@ -136,11 +136,11 @@ const Home = ({setLoading}) => {
           </h1>
           </div>
           <div className="flex justify-end">
-            <span className="w-[100%] md:w-[50%]">
-            <p className="text-[15px] text-[#777] text-justify px-2rem">I am a passionate software developer with expertise in frontend development and peer-to-peer (P2P) technologies. My focus lies in creating intuitive and engaging user experiences, coupled with robust decentralized architectures. I am committed to continuous learning and growth in the tech domain. My technical interests include building user-friendly interfaces, decentralized systems, and collaborative tools that empower individuals and organizations alike.</p>
-            <span className="text-[10px] md:text-[14px] py-[1rem] md:p-[2rem] flex justify-start gap-[4rem]">
-              <button onClick={() => handleNavigation("/projects")} type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Projects</button>
-              <a href="mailto:rohanchaudhary.bkbiet2022@gmail.com" type="button" className="uppercase flex items-center gap-2 button"><img src={arrowImg} className="w-[10px]" />Contact</a>
+            <span className="w-[100%] md:w-[60%]">
+            <p className="text-[18px] text-[#777] text-justify px-2rem">I am a passionate software developer with expertise in frontend development and peer-to-peer (P2P) technologies. My focus lies in creating intuitive and engaging user experiences, coupled with robust decentralized architectures. I am committed to continuous learning and growth in the tech domain. My technical interests include building user-friendly interfaces, decentralized systems, and collaborative tools that empower individuals and organizations alike.</p>
+            <span className="text-[10px] md:text-[14px] py-[1rem] md:px-[2rem] flex justify-start gap-[4rem]">
+              <button onClick={() => handleNavigation("/projects")} type="button" className="uppercase flex items-center gap-2 button text-[16px] pr-4"><img src={arrowImg} className="w-[10px]" />Projects</button>
+              <a href="mailto:rohanchaudhary.bkbiet2022@gmail.com" type="button" className="uppercase flex items-center gap-2 button text-[16px] pr-4"><img src={arrowImg} className="w-[10px]" />Contact</a>
             </span>
             </span>
           </div>
@@ -221,7 +221,7 @@ const projectData = [
     blockNumber: "02",
     title: "obile Apps",
     flickeringChars: ["M", "*", "~"],
-    description: "Develop seamless mobile applications for iOS and Android platforms. Develop seamless mobile applications for iOS and Android platforms. Develop seamless mobile applications for iOS and Android platforms. ",
+    description: "Develop seamless mobile applications for iOS and Android platforms.",
     buttonText: "App Development",
     imageSrc: mobile,
     buttonLink: "/mobile-apps"

@@ -21,8 +21,12 @@
   right: 1rem;
   transform: translateY(-50%);
   text-align: justify;
-  font-size: 10px;
-  width: 20%;
+  font-size: 14px;
+  width: 30%;
+  padding: 1rem;
+  background-color: #000000b6;
+  box-shadow: 0 0 50px #000;
+  border-radius: 10px;
 }
 .link--active{
   color: #fff;

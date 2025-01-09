@@ -108,11 +108,11 @@ const Footer = ({setLoading}) => {
             </button>
           </li>
           <li className={currentPath === "/projects" ? "active" : "button"}>
-            <button onClick={() => handleNavigation("/projects")}> Projects </button>
+            <button onClick={() => handleNavigation("/projects")}>Projects</button>
           </li>
           <li className={currentPath === "/contact" ? "active" : "button"}>
             {/* <button onClick={() => handleNavigation("/contact")}> Contact </button> */}
-            <a href={`mailto:rohanchaudhary.bkbiet2022@gmail.com`}> Contact </a>
+            <a href={`mailto:rohanchaudhary.bkbiet2022@gmail.com`}>Contact</a>
           </li>
                     <li className="text-[#fff]">Free discovery call</li>
                 </ul>
@@ -120,10 +120,10 @@ const Footer = ({setLoading}) => {
             <div className="flex flex-col">
                 <p className="text-[14px] mb-[16px] text-[#777]">Services Links</p>
                 <ul className="text-[12px] text-[#777]">
-                    <li className="button">Website Development</li>
-                    <li className="button">P2P App Development</li>
-                    <li className="button">App Development</li>
-                    <li className="button">Designing</li>
+                    <li className="button throug">Website Development</li>
+                    <li className="button throug">P2P App Development</li>
+                    <li className="button throug">App Development</li>
+                    <li className="button throug">Designing</li>
                 </ul>
             </div>
             <div className="flex flex-col">
