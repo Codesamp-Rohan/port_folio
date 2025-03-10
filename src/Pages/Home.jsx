@@ -64,16 +64,6 @@ const Home = ({setLoading}) => {
             transition: "transform 0.1s ease-out",
           }} />
           </div>
-        <p className="about-me-para">
-          <b className="text-[20px] text-[#bbb] leading-[2rem]">About Me</b>
-          <br />I am a passionate software developer with expertise in frontend
-          development and peer-to-peer (P2P) technologies. My focus lies in
-          creating intuitive and engaging user experiences, coupled with robust
-          decentralized architectures. I am committed to continuous learning and
-          growth in the tech domain. My technical interests include building
-          user-friendly interfaces, decentralized systems, and collaborative
-          tools that empower individuals and organizations alike.
-        </p>
         <div className="z-[100] leading-tight text-[2rem] md:text-[3rem] xl:text-[4rem] absolute left-0 bottom-0 p-[1rem]">
           <h1>
             {/* <span className="main-font">I</span>nterested in{" "} */}
